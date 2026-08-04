@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-accent="cyan">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official Portfolio of Boppana Naga Venkata Vinay - B.Tech CSE Student, Full-Stack & AI Developer specializing in React, Node.js, Python, PostgreSQL, and Claude AI.">
+  <title>Boppana Naga Venkata Vinay | Software Engineer Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">&lt;</span>Boppana Naga Venkata Vinay<span class="logo-accent">/&gt;</span>
+      </a>
+      
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#spotlight" class="nav-link">Role Focus</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link nav-btn-cta">Get In Touch</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher Button -->
+        <button id="theme-toggle" class="icon-btn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="theme-icon"></i>
+        </button>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="icon-btn mobile-only" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION WITH PROFILE PHOTO -->
+    <section id="hero" class="section hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="pulse-dot"></span> Open for Software Engineering Roles & Internships
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Boppana Naga Venkata Vinay</span>
+          </h1>
+          
+          <div class="typewriter-container">
+            <span class="static-txt">I specialize in</span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Computer Science & Engineering Student at Parul University. Full-Stack Developer proficient in React, Node.js, Python, PostgreSQL, Claude AI Integration, Docker, AWS, and modern web systems.
+          </p>
+
+          <!-- Stats Bar -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num" data-target="86">0</span><span class="stat-plus">.6%</span>
+              <span class="stat-label">10th Academic Score</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="80">0</span><span class="stat-plus">.4%</span>
+              <span class="stat-label">10+2 Academic Score</span>
+            </div>
+            <div class="stat-item">
+            <span class="stat-num" data-target="6.15" data-float="true">0.00</span>
+            <span class="stat-label">B.Tech Academic CGPA</span>
+          </div>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-rocket"></i> View Featured Work (PriceIQ)
+            </a>
+            <button id="open-resume-btn" class="btn btn-secondary">
+              <i class="fa-solid fa-file-pdf"></i> View Official Resume
+            </button>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-regular fa-paper-plane"></i> Contact Vinay
+            </a>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/vinay6314" target="_blank" rel="noopener noreferrer" title="GitHub Profile: vinay6314"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/B.N.V.Vinay" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile: B.N.V.Vinay"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:vinaychoudary63@gmail.com" title="Direct Email: vinaychoudary63@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+918688771185" title="Call +91-8688771185"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <!-- PROFILE PHOTO CONTAINER -->
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-frame">
+            <img src="/vinay_profile.jpg" alt="Boppana Naga Venkata Vinay Profile Picture" class="hero-avatar-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECRUITER SPOTLIGHT SECTION -->
+    <section id="spotlight" class="section spotlight-section">
+      <div class="section-header">
+        <span class="section-subtitle">Recruiter Perspective</span>
+        <h2 class="section-title">Select Target Company Role</h2>
+        <p class="section-description">
+          Customize the spotlight below to review skills and project highlights tailored to your hiring criteria.
+        </p>
+      </div>
+
+      <div class="role-selector-container">
+        <button class="role-chip active" data-role="all">
+          <i class="fa-solid fa-layer-group"></i> Full Profile Overview
+        </button>
+        <button class="role-chip" data-role="fullstack">
+          <i class="fa-solid fa-code"></i> Full-Stack Web Developer
+        </button>
+        <button class="role-chip" data-role="aiml">
+          <i class="fa-solid fa-brain"></i> AI & Intelligent Apps (Claude API)
+        </button>
+        <button class="role-chip" data-role="devops">
+          <i class="fa-solid fa-server"></i> Cloud, Docker & CI/CD
+        </button>
+      </div>
+
+      <div class="spotlight-card glass-panel" id="spotlight-card">
+        <div class="spotlight-badge" id="spotlight-role-title">Full Spectrum Overview</div>
+        <h3 id="spotlight-headline">Building full-stack AI-driven applications with robust backend architecture</h3>
+        <p id="spotlight-summary">
+          Engineered PriceIQ, a full-stack AI price optimization SaaS app using React, Node.js, PostgreSQL, Claude API, Prisma ORM, Redis, Docker, and AWS.
+        </p>
+        
+        <div class="spotlight-highlights" id="spotlight-highlights">
+          <div class="highlight-pill"><i class="fa-solid fa-check"></i> Claude API Integration & Price Optimization</div>
+          <div class="highlight-pill"><i class="fa-solid fa-check"></i> JWT Secured REST APIs & Express.js</div>
+          <div class="highlight-pill"><i class="fa-solid fa-check"></i> Prisma ORM & Redis Performance Caching</div>
+          <div class="highlight-pill"><i class="fa-solid fa-check"></i> Docker, AWS & GitHub Actions CI/CD Deployment</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="section-header">
+        <span class="section-subtitle">Candidate Background</span>
+        <h2 class="section-title">About Me & Personal Details</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text glass-panel">
+          <h3>Full-Stack & AI Software Developer</h3>
+          <p>
+            I am <strong>Boppana Naga Venkata Vinay</strong>, currently pursuing my B.Tech in Computer Science and Engineering at Parul University, Gujarat (2023 - 2027).
+          </p>
+          <p>
+            I possess strong fundamentals in Data Structures & Algorithms, Object-Oriented Programming (OOPS), Database Management Systems (DBMS), and Operating Systems. I have practical expertise building full-stack web applications, integrating AI APIs (Claude API), optimizing backend queries with Prisma & Redis, and deploying via Docker and AWS.
+          </p>
+          
+          <div class="about-key-points">
+            <div class="point-item">
+              <i class="fa-solid fa-brain point-icon"></i>
+              <div>
+                <strong>AI & Smart Optimization</strong>
+                <p>Integrated Claude API for dynamic SaaS price optimization and automated competitor analytics.</p>
+              </div>
+            </div>
+            <div class="point-item">
+              <i class="fa-solid fa-layer-group point-icon"></i>
+              <div>
+                <strong>Full-Stack Mastery</strong>
+                <p>Proficient in React, Node.js, Express, PostgreSQL, Prisma ORM, and Tailwind CSS.</p>
+              </div>
+            </div>
+            <div class="point-item">
+              <i class="fa-solid fa-cloud-arrow-up point-icon"></i>
+              <div>
+                <strong>DevOps & Cloud Deployment</strong>
+                <p>Hands-on experience deploying containerized apps with Docker, AWS, and GitHub Actions CI/CD.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card glass-panel">
+          <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+            <img src="/vinay_profile.jpg" alt="Vinay Avatar" style="width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-primary);">
+            <div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 2px;">Boppana Naga Venkata Vinay</h3>
+              <p style="color: var(--accent-primary); font-size: 0.85rem; font-weight: 600;">Full-Stack & AI Developer</p>
+            </div>
+          </div>
+          
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Full Name:</span>
+              <span class="info-val">Boppana Naga Venkata Vinay</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Date of Birth:</span>
+              <span class="info-val">14-08-2005</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Gender / Nationality:</span>
+              <span class="info-val">Male / Indian</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Phone:</span>
+              <span class="info-val">+91-8688771185</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Email:</span>
+              <span class="info-val">vinaychoudary63@gmail.com</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Spoken Languages:</span>
+              <span class="info-val">English, Telugu, Hindi</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Address:</span>
+              <span class="info-val">D-No-1-39, Main Road, Sammetavarigudem, Chintalapudi Mandal, Eluru - 534460, AP</span>
+            </div>
+          </div>
+
+          <div class="tech-badge-cloud">
+            <span class="badge">Python</span>
+            <span class="badge">Java</span>
+            <span class="badge">C</span>
+            <span class="badge">React</span>
+            <span class="badge">Node.js</span>
+            <span class="badge">PostgreSQL</span>
+            <span class="badge">Prisma</span>
+            <span class="badge">Redis</span>
+            <span class="badge">Docker</span>
+            <span class="badge">AWS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="section-header">
+        <span class="section-subtitle">Technical Competencies</span>
+        <h2 class="section-title">Technical Skills & Coursework</h2>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Category 1 -->
+        <div class="skill-category glass-panel">
+          <div class="category-title">
+            <i class="fa-solid fa-code"></i> Programming Languages
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Python</span><span>92%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Java</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>C</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>HTML5 & CSS3</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category glass-panel">
+          <div class="category-title">
+            <i class="fa-solid fa-laptop-code"></i> Web & App Development
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>React & Tailwind CSS</span><span>94%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 94%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Node.js & Express REST APIs</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Artificial Intelligence (Claude API)</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Android Development Fundamentals</span><span>78%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 78%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category glass-panel">
+          <div class="category-title">
+            <i class="fa-solid fa-database"></i> Database & Backend Tools
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>PostgreSQL & SQL</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Prisma ORM</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 88%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Redis Caching</span><span>85%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>JWT Authentication</span><span>92%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="skill-category glass-panel">
+          <div class="category-title">
+            <i class="fa-solid fa-gears"></i> DevOps, Tools & Core CS
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info"><span>Docker & AWS Deployment</span><span>86%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 86%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>GitHub Actions CI/CD & Vercel</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Data Structures & Algorithms</span><span>90%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span>Operating Systems & DBMS</span><span>92%</span></div>
+              <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section projects-section">
+      <div class="section-header">
+        <span class="section-subtitle">Engineering Projects</span>
+        <h2 class="section-title">Featured Project Spotlight</h2>
+        <p class="section-description">
+          A deep dive into real-world software engineering applications built, optimized, and deployed live.
+        </p>
+      </div>
+
+      <div class="projects-grid" style="grid-template-columns: 1fr;">
+        <!-- Featured Main Project: PriceIQ -->
+        <article class="project-card glass-panel" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px;">
+          <div class="project-img-wrapper" style="height: 100%; min-height: 320px;">
+            <img src="/priceiq_ai_platform_1785840861796.jpg" alt="PriceIQ AI Price Optimization SaaS" class="project-img">
+            <span class="project-tag">AI SaaS Platform (2026)</span>
+          </div>
+          <div class="project-content">
+            <div class="project-metrics">
+              <i class="fa-solid fa-bolt"></i> Live Production SaaS | Claude AI Integration | Redis Cached
+            </div>
+            <h3 class="project-title" style="font-size: 1.8rem;">PriceIQ – AI Price Optimization</h3>
+            <p class="project-description">
+              PriceIQ is an AI-powered SaaS application built with React, Node.js, and PostgreSQL that leverages the <strong>Claude API</strong> for intelligent price optimization, real-time competitor tracking, and dynamic pricing strategies.
+            </p>
+
+            <ul style="padding-left: 20px; color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px;">
+              <li>Built a full-stack SaaS app using React, Node.js, and PostgreSQL.</li>
+              <li>Integrated AI (Claude API) for smart price optimization recommendations.</li>
+              <li>Developed secure REST APIs with JWT authentication.</li>
+              <li>Used Prisma ORM and Redis for fast query performance optimization.</li>
+              <li>Implemented real-time analytics and competitor price tracking.</li>
+              <li>Designed responsive UI with React and Tailwind CSS.</li>
+              <li>Deployed using Docker, AWS, and CI/CD (GitHub Actions).</li>
+            </ul>
+
+            <div class="project-tech" style="margin-bottom: 25px;">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+              <span>Claude API</span>
+              <span>Prisma ORM</span>
+              <span>Redis</span>
+              <span>Tailwind CSS</span>
+              <span>Docker</span>
+              <span>AWS</span>
+              <span>GitHub Actions</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="https://priceiq-saxo.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Live Application
+              </a>
+              <a href="https://github.com/vinay6314" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <i class="fa-brands fa-github"></i> GitHub Repository
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="section education-section">
+      <div class="section-header">
+        <span class="section-subtitle">Academic Qualifications</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="timeline">
+        <!-- B.Tech -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">2023 – 2027</span>
+            <h3 class="timeline-role">Bachelor of Technology (B.Tech)</h3>
+            <h4 class="timeline-company">Computer Science & Engineering, Parul University</h4>
+            <p style="color: var(--accent-primary); font-weight: 700; margin-bottom: 8px;">CGPA: 6.15</p>
+            <p class="timeline-desc">
+              Location: Gujarat, India.<br>
+              Focusing on Data Structures & Algorithms, Database Management Systems (DBMS), Artificial Intelligence, Operating Systems, Web & Mobile Development.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10+2 Intermediate -->
+        <div class="timeline-item right">
+          <div class="timeline-dot"><i class="fa-solid fa-school"></i></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">2020 – 2022</span>
+            <h3 class="timeline-role">10+2 (Higher Secondary Education)</h3>
+            <h4 class="timeline-company">Board of Intermediate Education</h4>
+            <p style="color: var(--accent-primary); font-weight: 700; margin-bottom: 8px;">Percentage: 80.4%</p>
+            <p class="timeline-desc">
+              Location: Eluru, Andhra Pradesh, India.
+            </p>
+          </div>
+        </div>
+
+        <!-- 10th SSC -->
+        <div class="timeline-item left">
+          <div class="timeline-dot"><i class="fa-solid fa-award"></i></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-date">2019 – 2020</span>
+            <h3 class="timeline-role">10th Standard (SSC)</h3>
+            <h4 class="timeline-company">SSC Board of Andhra Pradesh</h4>
+            <p style="color: var(--accent-primary); font-weight: 700; margin-bottom: 8px;">Percentage: 86.6%</p>
+            <p class="timeline-desc">
+              Location: Eluru, Andhra Pradesh, India.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section certificates-section">
+      <div class="section-header">
+        <span class="section-subtitle">Professional Credentials</span>
+        <h2 class="section-title">Certificates & Industry Simulations</h2>
+      </div>
+
+      <div style="max-width: 700px; margin: 0 auto;">
+        <div class="glass-panel" style="padding: 30px; display: flex; align-items: center; gap: 20px;">
+          <div class="icon-box" style="width: 60px; height: 60px; font-size: 1.6rem;"><i class="fa-solid fa-certificate"></i></div>
+          <div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 6px;">Software Engineering Job Simulation</h3>
+            <p style="color: var(--accent-primary); font-weight: 600; margin-bottom: 4px;">JPMorgan Chase & Co. on Forage</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Completed practical tasks in engineering system architecture, interface development, and code optimizations simulating enterprise software development workflows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="section-header">
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact Boppana Naga Venkata Vinay</h2>
+        <p class="section-description">
+          Interested in hiring me for Software Engineering, Full-Stack Developer, or Internship roles? Send a message directly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info glass-panel">
+          <h3>Contact Details</h3>
+          <p>
+            I am actively seeking software engineering positions and internship opportunities. Feel free to contact me via phone, email, or social profiles.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-solid fa-user"></i></div>
+              <div>
+                <strong>Name</strong>
+                <p>Boppana Naga Venkata Vinay</p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+918688771185">+91-8688771185</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:vinaychoudary63@gmail.com">vinaychoudary63@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <strong>LinkedIn</strong>
+                <p><a href="https://linkedin.com/in/B.N.V.Vinay" target="_blank">B.N.V.Vinay</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <strong>GitHub</strong>
+                <p><a href="https://github.com/vinay6314" target="_blank">vinay6314</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Address</strong>
+                <p>D-No-1-39, Main Road, Sammetavarigudem, Chintalapudi Mandal, Eluru - 534460, Andhra Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container glass-panel">
+          <div class="preset-prompts">
+            <span>Quick Message Prompts:</span>
+            <button class="btn-chip" data-msg="Hi Vinay, we reviewed your PriceIQ project & resume. We would like to schedule an interview for a Software Engineering role!">💼 Recruiter Interview</button>
+            <button class="btn-chip" data-msg="Hi Vinay, I saw your full-stack work with React, Node.js, and Claude AI. Let's discuss an internship/project opportunity.">🚀 Tech Collaboration</button>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" required placeholder="e.g. Hiring Manager / Recruiter">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" required placeholder="e.g. recruiter@company.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" required placeholder="e.g. Software Engineer Opportunity">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" required placeholder="Type your message for Vinay here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+              <i class="fa-solid fa-paper-plane"></i> Send Direct Message
+            </button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- DECLARATION FOOTER -->
+  <footer class="footer">
+    <div class="footer-container" style="flex-direction: column; text-align: center; gap: 10px;">
+      <p style="font-style: italic; max-width: 750px; margin: 0 auto; color: var(--text-muted);">
+        "I hereby declare that the information provided in this resume is true and accurate to the best of my knowledge." — <strong>Boppana Naga Venkata Vinay</strong>
+      </p>
+      <p>&copy; 2026 Boppana Naga Venkata Vinay. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RESUME MODAL -->
+  <div id="resume-modal" class="modal-overlay">
+    <div class="modal-content resume-modal-content glass-panel">
+      <div class="resume-modal-header">
+        <h2><i class="fa-solid fa-file-invoice"></i> Official Resume Preview</h2>
+        <div class="resume-modal-actions">
+          <button class="btn btn-primary btn-sm" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close" id="resume-close-btn">&times;</button>
+        </div>
+      </div>
+
+      <div class="resume-paper">
+        <header class="resume-header" style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
+          <div style="text-align: left;">
+            <h1>BOPPANA NAGA VENKATA VINAY</h1>
+            <p class="resume-subtitle">Eluru, Andhra Pradesh, India</p>
+            <div class="resume-contact-bar" style="justify-content: flex-start;">
+              <span><i class="fa-solid fa-phone"></i> +91-8688771185</span>
+              <span><i class="fa-solid fa-envelope"></i> vinaychoudary63@gmail.com</span>
+              <span><i class="fa-brands fa-linkedin"></i> B.N.V.Vinay</span>
+              <span><i class="fa-brands fa-github"></i> vinay6314</span>
+            </div>
+          </div>
+          <img src="/vinay_profile.jpg" alt="Vinay Photo" style="width: 100px; height: 120px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1;">
+        </header>
+
+        <section class="resume-sec">
+          <h3>EDUCATION</h3>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <strong>Bachelor of Technology in Computer Science and Engineering</strong>
+              <span>2023 – 2027</span>
+            </div>
+            <p>Parul University, Gujarat, India | <strong>CGPA: 6.15</strong></p>
+          </div>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <strong>10+2, Board of Intermediate Education</strong>
+              <span>2020 – 2022</span>
+            </div>
+            <p>Eluru, India | <strong>Percentage: 80.4%</strong></p>
+          </div>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <strong>10th, SSC Board of Andhra Pradesh</strong>
+              <span>2019 – 2020</span>
+            </div>
+            <p>Eluru, India | <strong>Percentage: 86.6%</strong></p>
+          </div>
+        </section>
+
+        <section class="resume-sec">
+          <h3>COURSEWORK / SKILLS</h3>
+          <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+            <li>• Data Structures & Algorithms</li>
+            <li>• Database Management System (DBMS)</li>
+            <li>• Artificial Intelligence</li>
+            <li>• OOPS Concept</li>
+            <li>• Web Development</li>
+            <li>• Android Development</li>
+          </ul>
+        </section>
+
+        <section class="resume-sec">
+          <h3>PROJECTS</h3>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <strong>PriceIQ – AI Price Optimization</strong>
+              <span>2026</span>
+            </div>
+            <p><strong>Tech Stack:</strong> React, Node.js, PostgreSQL, Claude API, JWT, Prisma ORM, Redis, Tailwind CSS, Docker, AWS, GitHub Actions</p>
+            <p><strong>Live Demo:</strong> <a href="https://priceiq-saxo.vercel.app/" target="_blank">https://priceiq-saxo.vercel.app/</a></p>
+            <ul>
+              <li>Built a full-stack SaaS app using React, Node.js, and PostgreSQL.</li>
+              <li>Integrated AI (Claude API) for smart price optimization.</li>
+              <li>Developed secure REST APIs with JWT authentication.</li>
+              <li>Used Prisma ORM and Redis for performance optimization.</li>
+              <li>Implemented real-time analytics and competitor price tracking.</li>
+              <li>Designed responsive UI with React and Tailwind CSS.</li>
+              <li>Deployed using Docker, AWS, and CI/CD (GitHub Actions).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="resume-sec">
+          <h3>CERTIFICATES</h3>
+          <p><strong>Software Engineering Job Simulation</strong> – JPMorgan Chase & Co. on Forage.</p>
+        </section>
+
+        <section class="resume-sec">
+          <h3>TECHNICAL SKILLS</h3>
+          <p><strong>Languages:</strong> Python, Java, C, HTML, CSS</p>
+          <p><strong>Developer Tools:</strong> Visual Studio Code, GitHub</p>
+          <p><strong>Core Subjects:</strong> Operating Systems, DBMS</p>
+        </section>
+
+        <section class="resume-sec">
+          <h3>PROFILE</h3>
+          <p>• <strong>Date of Birth:</strong> 14-08-2005</p>
+          <p>• <strong>Gender:</strong> Male</p>
+          <p>• <strong>Languages:</strong> English, Telugu, Hindi</p>
+          <p>• <strong>Nationality:</strong> Indian</p>
+          <p>• <strong>Permanent Address:</strong> D-No-1-39, Main Road, Sammetavarigudem, Chintalapudi Mandal, Eluru - 534460</p>
+        </section>
+
+        <section class="resume-sec" style="margin-top: 25px; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+          <h3>DECLARATION</h3>
+          <p style="font-style: italic;">
+            "I hereby declare that the information provided in this resume is true and accurate to the best of my knowledge"
+          </p>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
