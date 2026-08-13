@@ -124,10 +124,12 @@ function initTypewriter() {
   if (!el) return;
 
   const phrases = [
-    "Full-Stack Web Development (React & Node)",
-    "AI Integration (Claude API)",
-    "Database Optimization (Prisma & Redis)",
-    "DevOps & Cloud (Docker, AWS, CI/CD)"
+    "Full-Stack Web & Software Engineering (React, Node, TS)",
+    "Mini ERP + CRM Enterprise Systems (RBAC, Zod, PDFKit)",
+    "AI Price Optimization (Claude API)",
+    "Designing Scalable RAG Pipelines",
+    "Database Caching & Performance (Prisma & Redis)",
+    "DevOps & Deployment (Docker, Vercel, Render, AWS)"
   ];
 
   let phraseIdx = 0;
@@ -206,47 +208,47 @@ function initCounterStats() {
    -------------------------------------------------------------------------- */
 const spotlightData = {
   all: {
-    title: "Full Spectrum Overview",
-    headline: "Building full-stack AI-driven applications with robust backend architecture",
-    summary: "Engineered PriceIQ, a full-stack AI price optimization SaaS app using React, Node.js, PostgreSQL, Claude API, Prisma ORM, Redis, Docker, and AWS.",
+    title: "Full Resume Overview",
+    headline: "Building full-stack AI-driven applications and ERP/CRM business solutions",
+    summary: "Engineered PriceIQ (AI Price Optimization SaaS) and Durga Enterprise (Mini ERP + CRM Portal) using React, TypeScript, Node.js, Express, PostgreSQL, Prisma ORM, Redis, Docker, and Render.",
     highlights: [
-      "<i class='fa-solid fa-check'></i> Claude API Integration & Price Optimization",
-      "<i class='fa-solid fa-check'></i> JWT Secured REST APIs & Express.js",
-      "<i class='fa-solid fa-check'></i> Prisma ORM & Redis Performance Caching",
-      "<i class='fa-solid fa-check'></i> Docker, AWS & GitHub Actions CI/CD Deployment"
+      "<i class='fa-solid fa-check'></i> PriceIQ – AI Price Optimization SaaS & Claude API",
+      "<i class='fa-solid fa-check'></i> Durga Enterprise – Mini ERP + CRM Portal with RBAC & PDFKit",
+      "<i class='fa-solid fa-check'></i> Scalable RAG Pipelines Certification & AI Upskilling",
+      "<i class='fa-solid fa-check'></i> Docker, Vercel, Render & AWS Cloud Deployment"
     ]
   },
   fullstack: {
-    title: "Full-Stack Web Developer",
-    headline: "Connecting React UIs with Node.js, Express & PostgreSQL backends",
-    summary: "Proven ability to craft responsive frontends using React & Tailwind CSS, backed by secure REST APIs with JWT authentication, Prisma ORM, and relational database schemas.",
+    title: "Full-Stack Web Development",
+    headline: "Architecting React & TypeScript frontends with Node.js & Express REST APIs",
+    summary: "Proficient in developing complete web systems with JWT authentication, RBAC authorization, Prisma ORM, Zod validation, and responsive Tailwind CSS UIs.",
     highlights: [
-      "<i class='fa-solid fa-check'></i> React & Tailwind CSS Responsive Interfaces",
-      "<i class='fa-solid fa-check'></i> Node.js & Express RESTful APIs",
-      "<i class='fa-solid fa-check'></i> PostgreSQL & Prisma ORM Schema Design",
-      "<i class='fa-solid fa-check'></i> Real-time Analytics & Competitor Price Tracking"
+      "<i class='fa-solid fa-check'></i> React.js, Vite & Tailwind CSS Modern Interfaces",
+      "<i class='fa-solid fa-check'></i> Node.js & Express REST APIs with JWT & RBAC",
+      "<i class='fa-solid fa-check'></i> PostgreSQL, SQLite & MongoDB Schemas",
+      "<i class='fa-solid fa-check'></i> Performance Caching via Redis & Prisma ORM"
+    ]
+  },
+  erp: {
+    title: "Mini ERP + CRM Systems",
+    headline: "Durga Enterprise – Inventory tracking, sales workflows & automated tax invoicing",
+    summary: "Built Durga Enterprise, a full-stack ERP + CRM portal for inventory management, automatic stock deduction, audit logs, and PDF tax invoice generation using PDFKit.",
+    highlights: [
+      "<i class='fa-solid fa-check'></i> Customer, Inventory & Sales Management Workflows",
+      "<i class='fa-solid fa-check'></i> Automated Stock Deduction & Audit Logs",
+      "<i class='fa-solid fa-check'></i> Dynamic PDF Tax Invoice Generation with PDFKit",
+      "<i class='fa-solid fa-check'></i> Containerized & Deployed on Docker, Vercel & Render"
     ]
   },
   aiml: {
-    title: "AI & Intelligent Applications",
-    headline: "Smart Price Optimization leveraging Claude API & AI Analytics",
-    summary: "Integrated LLM capabilities (Claude API) into PriceIQ to analyze competitor pricing trends and output automated, intelligent pricing strategies.",
+    title: "AI & Scalable RAG Pipelines",
+    headline: "Smart Price Optimization & Scalable Retrieval-Augmented Generation Architecture",
+    summary: "Integrated LLM (Claude API) for dynamic SaaS pricing analytics in PriceIQ and completed certification in Designing Scalable RAG Pipelines.",
     highlights: [
-      "<i class='fa-solid fa-check'></i> Claude API Prompt Engineering & Pipeline Integration",
-      "<i class='fa-solid fa-check'></i> Real-time Competitor Price Tracking Engine",
-      "<i class='fa-solid fa-check'></i> Automated Insights & Pricing Recommendations",
-      "<i class='fa-solid fa-check'></i> Python & Modern Web Technology Stack"
-    ]
-  },
-  devops: {
-    title: "Cloud, Docker & CI/CD",
-    headline: "Containerization, Cloud Deployments & Automated Build Pipelines",
-    summary: "Experience containerizing SaaS applications using Docker, deploying on AWS infrastructure, and setting up automated GitHub Actions CI/CD pipelines.",
-    highlights: [
-      "<i class='fa-solid fa-check'></i> Docker Containerization for Full-Stack Services",
-      "<i class='fa-solid fa-check'></i> AWS Cloud Deployment Infrastructure",
-      "<i class='fa-solid fa-check'></i> Automated GitHub Actions CI/CD Pipelines",
-      "<i class='fa-solid fa-check'></i> Vercel Production Hosting (priceiq-saxo.vercel.app)"
+      "<i class='fa-solid fa-check'></i> Claude API Integration for Smart Price Optimization",
+      "<i class='fa-solid fa-check'></i> Certified in Designing Scalable RAG Pipelines",
+      "<i class='fa-solid fa-check'></i> Real-time Analytics & Competitor Price Tracking Engine",
+      "<i class='fa-solid fa-check'></i> Python, JavaScript & Data Analytics Coursework"
     ]
   }
 };
